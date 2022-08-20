@@ -1,3 +1,19 @@
+<?php
+    require_once "classes/Usuarios.php";
+    $usuarios = new Usuarios();
+
+    if (isset($_POST['usuario']) && isset($_POST['senha'])) {
+        $usuario = filter_var($_POST['usuario']);
+        $senha = filter_var($_POST['senha']);
+
+       if ($usuarios->logar($usuario, $senha)){
+            header("Location: index.php");
+       } else {
+            //senha incorreta
+       }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +36,7 @@
             <img src="./assets/images/logo.png" alt="Logo Polivalente" class="logo rounded mx-auto d-block">
         </div>
         <div class="row">
-            <form method="POST">            
+            <form method="POST" action="">            
                 <label for="usuario" class="form-label mt-3">Usuário</label>
                 <input type="text" name="usuario" class="form-control" placeholder="Digite seu usuário" required autofocus>
 
