@@ -30,7 +30,7 @@
 <body>
     <div class="fundo-login">
         <div class="titulo">
-            <h3>Arquivo de Alunos Antigos</h3>
+            <h3>Arquivo</h3>
         </div>
         <div class="row">
             <img src="./assets/images/logo.png" alt="Logo Polivalente" class="logo rounded mx-auto d-block">
